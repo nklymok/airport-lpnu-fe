@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import { Toaster } from "../components/ui/toaster";
+
+import "../globals.css";
 
 export default function RootLayout({
   children,
@@ -8,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <>{children}</>
+        <Toaster />
+      </body>
     </html>
   );
 }

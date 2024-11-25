@@ -37,15 +37,17 @@ export default function SubscriptionModal({
         <DialogHeader>
           <DialogTitle>Subscribe to Price Changes</DialogTitle>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="flex justify-between gap-1 py-4 w-full"
+        >
+          <div className="flex items-center gap-4">
             <Input
               id="email"
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="col-span-4"
               required
             />
           </div>
